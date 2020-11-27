@@ -24,8 +24,18 @@ const transactions = [
 
 // SOLUTION:
 
+
 function addAccumulator() {
-  return transactions;
+
+  let accumulated = 0
+
+  return transactions.map(tran => {
+    accumulated += tran.amount
+     tran.accumulated = accumulated
+       return tran 
+   
+
+  })
 }
 
 module.exports = addAccumulator;
